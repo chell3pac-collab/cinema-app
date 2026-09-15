@@ -1,0 +1,285 @@
+.hero-section {
+  margin-bottom: 40px;
+
+  @media (max-width: 376px) {
+    margin-bottom: 24px;
+  }
+}
+
+.hero-section-wrapper {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  background-color: transparent;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 15px;
+  }
+
+  @media (max-width: 950px) {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+
+  @media (max-width: 376px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-info {
+  margin-top: 75px;
+
+  @media (max-width: 376px) {
+    width: 335px;
+    margin: 0;
+  }
+}
+
+.hero-info-wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @media (max-width: 996px) {
+    gap: 5px;
+  }
+
+  @media (max-width: 376px) {
+    gap: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.hero-rating {
+  font-family: 'Play', sans-serif;
+  width: 70px;
+  background-color: #308E21;
+  padding: 4px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  gap: 4px;
+  border-radius: 16px;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.rating-high {
+  background-color: #f1c40f;
+}
+
+.rating-medium {
+  background-color: #2ecc71;
+}
+
+.rating-low {
+  background-color: #e74c3c;
+}
+
+.rating-unknown {
+  background-color: #95a5a6;
+}
+
+.hero-year,
+.hero-genre,
+.hero-duration {
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 24px;
+
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media (max-width: 376px) {
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFFB2;
+  }
+}
+
+.hero-info-title {
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 16px;
+
+  @media (max-width: 1200px) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  @media (max-width: 376px) {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 12px;
+  }
+}
+
+.hero-overview {
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFFB2;
+  margin-bottom: 60px;
+
+  @media (max-width: 500px) {
+    font-size: 21px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 376px) {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.hero-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 376px) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+  }
+}
+
+.btn {
+  background-color: #393B3C;
+  color: #fff;
+  padding: 16px 48px;
+  border-radius: 28px;
+  border: none;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    width: 70%;
+  }
+
+  @media (max-width: 376px) {
+    width: 167px;
+    padding: 16px 40px;
+    font-size: 17px;
+  }
+}
+
+.btn:hover {
+  background-color: #45526E;
+  outline: none;
+}
+
+.btn:focus {
+  background-color: #45526E;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #67A5EB;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: 376px) {
+    width: 335px;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.btn-icon {
+  width: 68px;
+  background-color: #333333;
+  border-radius: 28px;
+  border: none;
+  padding: 16px 0;
+  cursor: pointer;
+}
+
+.icon-heart,
+.icon-heart--active {
+  width: 24px;
+  height: 24px;
+  color: #B4A9FF;
+}
+
+.hero-info-poster {
+  width: 100%;
+  height: 552px;
+
+  @media (max-width: 640px) {
+    height: 320px;
+  }
+  
+
+  @media (max-width: 376px) {
+    width: 100%;
+    height: 234px;
+    margin-top: -40px;
+    margin-bottom: 8px;
+  }
+}
+
+.hero-info-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+
+  @media (max-width: 640px) {
+    height: 320px;
+  }
+
+  @media (max-width: 376px) {
+    height: 234px;
+  }
+}
+
+.icon-heart {
+  color: #fff;
+}
+
+.hero-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,130 @@
+.genre-list-page {
+  margin-bottom: 120px;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 569px) {
+    margin-top: -9px;
+  }
+
+  @media (max-width: 376px) {
+    margin-top: -17px;
+    gap: 40px;
+    margin-bottom: 27px;
+  }
+}
+
+.genre-list-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: capitalize;
+
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 376px) {
+    font-size: 24px;
+    line-height: 32px;
+    gap: 8px;
+  }
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-icon {
+  width: 40px;
+  height: 40px;
+
+  @media (max-width: 376px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.genre-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  gap: 64px 40px;
+
+  @media (max-width: 376px) {
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    gap: 24px 0;
+  }
+}
+
+.genre-list-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.genre-list-movie-card {
+  overflow: hidden;
+}
+
+.genre-list-poster {
+  width: 100%;
+  height: 336px;
+  border-radius: 8px;
+
+  @media (max-width: 376px) {
+    height: 502px;
+  }
+}
+
+.genre-list-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.show-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 218px;
+  padding: 16px 48px;
+  background-color: #67A5EB;
+  color: white;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+
+  
+
+  @media (max-width: 663px) {
+    background-color: #6A5DC2;
+    width: 100%;
+    padding: 16px 0;
+  }
+}
+
+.show-more-btn:hover {
+  background-color: #45526E;
+  outline: none;
+}
+
+.show-more-btn:focus {
+  background-color: #45526E;
+  outline: none;
+}

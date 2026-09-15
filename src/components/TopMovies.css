@@ -1,0 +1,46 @@
+.top-movies {
+    margin-bottom: 120px;
+
+    @media (max-width: 376px) {
+        padding: 32px 0;
+        margin-bottom: -28px;
+    }
+}
+
+.top-movies-title {
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin-bottom: 64px;
+
+    @media (max-width: 376px) {
+        font-size: 23px;
+        line-height: 31px;
+        margin-bottom: 24px;
+    }
+}
+
+.top-movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+    gap: 64px 40px;
+
+    @media (max-width: 663px) {
+        display: flex;
+        flex-direction: row;
+        overflow-x:auto;
+        scrollbar-width: none;
+        padding: 12px;
+    }
+
+    @media (max-width: 376px) {
+        display: flex;
+        flex-direction: row;
+        overflow-x:auto;
+        scrollbar-width: none;
+        padding: 12px;
+        margin-left: -12px;
+    }
+}

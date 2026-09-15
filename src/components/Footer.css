@@ -1,0 +1,24 @@
+.app-footer {
+    padding: 40px 0 ;
+}
+
+.social-link {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: end;
+    text-decoration: none;
+
+    @media (max-width: 376px) {
+        justify-content: start;
+    }
+}
+
+.social-icon {
+
+    @media (max-width: 376px) {
+        width: 24px;
+        height: 24px;
+        
+    }
+} 

@@ -1,0 +1,73 @@
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.auth-modal-content {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 64px 40px;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: modalSlideIn 0.3s ease-out;
+
+  @media (max-width: 650px) {
+    width: 335px;
+    padding: 64px 20px 32px 20px;
+  }
+}
+
+.auth-modal-close {
+  position: absolute;
+  top: 0;
+  right: -79px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+
+  @media (max-width: 650px) {
+    left: 189px;
+    top: 8px;
+  }
+}
+
+.auth-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 32px;
+  }
+}
+
+.auth-logo-icon {
+  width: 132px;
+  height: 30px;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,78 @@
+.movie-card-link {
+    display: flex;
+}
+
+.movie-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #333;
+    border: 1px solid #FFFFFF40;
+    box-shadow: 0px 0px 80px 0px #FFFFFF54;
+    border-radius: 16px;
+
+    @media (max-width: 663px) {
+        flex: 0 0 274px;
+        height: 410px;
+    }
+
+    @media (max-width: 524px) {
+        flex: 0 0 244px;
+        height: 367px;
+    }
+
+    @media (max-width: 376px) {
+        flex: 0 0 224px;
+        height: 336px;
+    }
+}
+
+.movie-number {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    background-color: #FFFFFF;
+    color: #6A5DC2;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 700;
+    z-index: 10;
+    width: 62px;
+    line-height: 32px;
+}
+
+.poster-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.card-number {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    background-color: #FFFFFF;
+    color: #6A5DC2;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 8px 24px;
+    border-radius: 50px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}

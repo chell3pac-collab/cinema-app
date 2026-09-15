@@ -1,0 +1,96 @@
+.genre-empty-message {
+  min-height: 100vh;
+  text-align: center;
+}
+
+.genres-page {
+  margin-top: 67px;
+  margin-bottom: 160px;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 569px) {
+    margin-top: -5px;
+  }
+
+  @media (max-width: 376px) {
+    margin-top: -15px;
+    margin-bottom: 23px;
+  }
+}
+
+.genres-title {
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 56px;
+  margin-bottom: 64px;
+
+  @media (max-width: 570px) {
+    font-size: 23px;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+.genres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 64px 40px;
+
+  @media (max-width: 376px) {
+    gap: 24px 0;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+  }
+}
+
+.genre-card {
+  position: relative;
+  height: 304px;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.genre-card-image {
+  width: 100%;
+  height: 220px;
+}
+
+.genre-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 22px 0 30px 0;
+  background: #0A0B0B;
+
+}
+
+.genre-name {
+  color: #FFFFFF;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 1px;
+  display: block;
+
+  @media (max-width: 376px) {
+    font-size: 23px;
+    line-height: 49px;
+  }
+}
+
+.genre-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}

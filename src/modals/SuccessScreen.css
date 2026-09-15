@@ -1,0 +1,36 @@
+.success-screen-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.success-screen-title {
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    text-align: center;
+}
+
+.success-screen-text {
+    font-family: 'Play', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.success-screen-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #67A5EB;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 28px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+}
