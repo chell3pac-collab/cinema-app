@@ -1,75 +1,55 @@
-# React + TypeScript + Vite
+## Стек
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **React 19 + TypeScript**
+- **Redux Toolkit** — глобальное состояние (слайсы авторизации и каталога фильмов)
+- **React Router v7** — маршрутизация, защищённые маршруты
+- **Axios** — HTTP-клиент (конфигурируемый под реальный API)
+- **Vite** — сборка и дев-сервер
+- **Heroicons / React Icons** — иконки
 
-Currently, two official plugins are available:
+## Страницы
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `/` — главная: подборки фильмов
+- `/genres` — каталог жанров
+- `/genres/:genre` — список фильмов выбранного жанра
+- `/movie/:id` — детальная карточка фильма
+- `/search` — поиск по каталогу
+- `/account` — личный кабинет (защищённый маршрут: без авторизации — редирект на главную)
 
-## React Compiler
+## Ключевые фичи
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Авторизация через модальное окно**: вход и регистрация без перехода на отдельную страницу; токен и профиль пользователя — в Redux
+- **Избранное**: добавление/удаление фильма сердечком; «отложенное действие» — если нажать «в избранное» до входа, после успешной авторизации действие применится автоматически
+- **Защищённый маршрут**: `/account` доступен только авторизованным, остальные перенаправляются на главную
+- **Фильтрация по жанрам и поиск** по названию
+- Страница фильма: постер, описание, метаданные
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Архитектура
 
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+src/
+  api/api.ts          — axios-клиент (baseURL вынесен в константу)
+  auth/authSlice.ts   — слайс авторизации (вход, выход, профиль)
+  movies/             — слайс каталога: фильмы, избранное
+  pages/              — 6 страниц приложения
+  components/         — Header, Footer, MainLayout и переиспользуемые блоки
+  modals/AuthModal    — модальное окно входа/регистрации
+  data/               — моковые данные фильмов и жанров
+  hooks/  utils/      — переиспользуемая логика и хелперы
 ```
+
+## Запуск
+
+```bash
+npm install
+npm run dev
+```
+
+Открой http://localhost:5173
+
+## Идеи для развития
+
+- Подключение реального API (TMDB) вместо моков — слой `api.ts` уже готов
+- Сохранение сессии в localStorage при перезагрузке страницы
+- Пагинация и сортировка в списках фильмов
+- Тёмная тема
