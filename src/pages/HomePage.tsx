@@ -6,7 +6,7 @@ import { TopMovies } from '../components/TopMovies';
 
 interface HomePageProps {
   onOpenAuth: () => void;
-  onAuthSuccess: () => void;
+  onAuthSuccess: (userData: { user: any; token: string }) => void;
   onRequestAddAfterAuth: (movieId: number) => void;
 }
 
