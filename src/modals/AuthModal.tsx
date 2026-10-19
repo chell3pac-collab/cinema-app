@@ -102,7 +102,7 @@ export const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
         </button>
 
         <div className="auth-logo">
-          <img className="auth-logo-icon" src="/login-icon.svg" alt="Cinema App" />
+          <img src="/login-icon_2x.webp" alt="" className="auth-logo-icon" />
         </div>
 
         {status === 'login' && (

@@ -19,7 +19,7 @@ export const GenresPage = () => {
               alt={genre.name}
               className="genre-card-image"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = '/images/no-genre.png'; 
+                (e.target as HTMLImageElement).src = '/no-poster.webp'; 
               }}
             />
             <div className="genre-overlay">

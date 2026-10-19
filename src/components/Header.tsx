@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({
     setResults([]);
     setIsOpen(false);
     navigate(`/movie/${movie.id}`);
-    setIsSearchExpanded(false); 
+    setIsSearchExpanded(false);
   };
 
   const handleClear = () => {
@@ -107,7 +107,7 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <header className="app-header">
       <div className="logo" onClick={() => navigate('/')}>
-        <img src="/logo-white.svg" alt="Cinema App" className='logo-icon' />
+        <img src="/logo-white_2x.webp" alt="Cinema App" className='logo-icon' />
       </div>
       <div className='wrapper'>
         <div className='logo-wrapper'>
@@ -117,13 +117,13 @@ const Header: React.FC<HeaderProps> = ({
             <Link className='nav-link-mobile' to="/genres"><GenresIcon className="nav-icon" /></Link>
           </nav>
 
-          <div 
-            ref={searchContainerRef} 
+          <div
+            ref={searchContainerRef}
             className={`search-input-wrapper ${isSearchExpanded ? 'expanded' : ''}`}>
             <SearchIcon className="search-icon" />
 
-            <button 
-              type="button" 
+            <button
+              type="button"
               className="search-toggle-btn"
               onClick={handleToggleSearch}
               aria-label="Открыть поиск"
@@ -131,13 +131,13 @@ const Header: React.FC<HeaderProps> = ({
               <SearchIcon className="search-icon-mobile" />
             </button>
 
-            <button 
-              type="button" 
+            <button
+              type="button"
               className="search-close-btn"
               onClick={handleCloseSearch}
               aria-label="Закрыть поиск"
             >
-              <CloseIcon className="search-close-icon"/>
+              <CloseIcon className="search-close-icon" />
             </button>
 
             <input
@@ -157,7 +157,7 @@ const Header: React.FC<HeaderProps> = ({
                 className="search-clear-btn"
                 aria-label="Очистить поиск"
               >
-                <CloseIcon className="search-close-icon"/>
+                <CloseIcon className="search-close-icon" />
               </button>
             )}
 
@@ -170,19 +170,19 @@ const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
       <div className="profile-actions">
-          {isAuthenticated ? (
-            <div className="profile-btn-group">
-              <Link to="/account" className="profile-btn">
-                <span className="profile-name active">{userName}</span>
-                <UserIcon className='profile-icon' />
-              </Link>
-            </div>
-          ) : (
-            <button className="login-btn active" onClick={onOpenAuth}>
-              Войти
-            </button>
-          )}
-        </div>
+        {isAuthenticated ? (
+          <div className="profile-btn-group">
+            <Link to="/account" className="profile-btn">
+              <span className="profile-name active">{userName}</span>
+              <UserIcon className='profile-icon' />
+            </Link>
+          </div>
+        ) : (
+          <button className="login-btn active" onClick={onOpenAuth}>
+            Войти
+          </button>
+        )}
+      </div>
     </header>
   );
 };

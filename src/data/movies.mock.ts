@@ -23,7 +23,7 @@ export const mockMovies: Movie[] = [
   {
     id: 1,
     title: 'Шерлок Холмс и доктор Ватсон: Знакомство',
-    poster: '/posters/sherlock.png',
+    poster: '/posters/sherlock.webp',
     genre: 'детектив,фантастика',
     duration: '1 ч 7 мин',
     rating: 7.5,
@@ -40,7 +40,7 @@ export const mockMovies: Movie[] = [
   {
     id: 2,
     title: 'Беспринципные',
-    poster: '/posters/top-1.png',
+    poster: '/posters/top-1.webp',
     genre: 'комедия, фантастика',
     duration: '45 мин',
     rating: 7.8,
@@ -58,7 +58,7 @@ export const mockMovies: Movie[] = [
   {
     id: 3,
     title: 'Воздух',
-    poster: '/posters/top-2.png',
+    poster: '/posters/top-2.webp',
     genre: 'военный, драма, фантастика',
     duration: '2 ч 30 мин',
     rating: 8.0,
@@ -75,7 +75,7 @@ export const mockMovies: Movie[] = [
   {
     id: 4,
     title: 'Лёд 3',
-    poster: '/posters/top-3.png',
+    poster: '/posters/top-3.webp',
     genre: 'мелодрама, спорт, фантастика',
     duration: '2 ч 10 мин',
     rating: 8.2,
@@ -93,7 +93,7 @@ export const mockMovies: Movie[] = [
   {
     id: 5,
     title: 'Внутри убийцы',
-    poster: '/posters/top-4.png',
+    poster: '/posters/top-4.webp',
     genre: 'триллер, детектив, фантастика',
     duration: '50 мин',
     rating: 7.9,
@@ -110,7 +110,7 @@ export const mockMovies: Movie[] = [
   {
     id: 6,
     title: 'Папины дочки. Новые',
-    poster: '/posters/top-5.png',
+    poster: '/posters/top-5.webp',
     genre: 'комедия, семейный, фантастика',
     duration: '24 мин',
     rating: 8.1,
@@ -128,7 +128,7 @@ export const mockMovies: Movie[] = [
   {
     id: 7,
     title: 'Холоп',
-    poster: '/posters/top-6.png',
+    poster: '/posters/top-6.webp',
     genre: 'комедия, фантастика',
     duration: '1 ч 55 мин',
     rating: 8.3,
@@ -145,7 +145,7 @@ export const mockMovies: Movie[] = [
   {
     id: 8,
     title: 'Три богатыря и Пуп Земли',
-    poster: '/posters/top-7.png',
+    poster: '/posters/top-7.webp',
     genre: 'мультфильм, приключения, фантастика',
     duration: '1 ч 25 мин',
     rating: 7.7,
@@ -162,7 +162,7 @@ export const mockMovies: Movie[] = [
   {
     id: 9,
     title: 'Инспектор Гаврилов',
-    poster: '/posters/top-8.png',
+    poster: '/posters/top-8.webp',
     genre: 'комедия, криминал, фантастика',
     duration: '25 мин',
     rating: 7.6,
@@ -180,7 +180,7 @@ export const mockMovies: Movie[] = [
   {
     id: 10,
     title: 'Шифр',
-    poster: '/posters/top-9.png',
+    poster: '/posters/top-9.webp',
     genre: 'драма, криминал, фантастика',
     duration: '52 мин',
     rating: 8.0,
@@ -197,7 +197,7 @@ export const mockMovies: Movie[] = [
   {
     id: 11,
     title: 'Командир',
-    poster: '/posters/top-10.png',
+    poster: '/posters/top-10.webp',
     genre: 'боевик, драма, фантастика',
     duration: '2 ч 05 мин',
     rating: 7.9,
