@@ -27,17 +27,13 @@ function App() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [pendingFavoriteId, setPendingFavoriteId] = useState<number | null>(null);
   const handleAuthSuccess = (userData: { user: any; token: string }) => {
-    console.log('[App] handleAuthSuccess вызван');
-    console.log('[App] pendingFavoriteId перед входом:', pendingFavoriteId);
 
     dispatch(loginSuccess(userData));
 
     if (pendingFavoriteId !== null) {
-      console.log('[App] Отправляем toggleFavorite для ID:', pendingFavoriteId);
       dispatch(toggleFavorite(pendingFavoriteId));
       setPendingFavoriteId(null);
     } else {
-      console.log('[App] pendingFavoriteId === null — добавлять нечего');
     }
 
     setIsAuthModalOpen(false);

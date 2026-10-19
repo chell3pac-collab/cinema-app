@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import LogoIcon from '../assets/Login-icon.svg?react';
 import CloseButton from '../assets/CloseButton.svg?react'
 import { LoginForm } from './LoginForm';
 import { RegistrationForm } from './RegistrationForm';
@@ -103,7 +102,7 @@ export const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
         </button>
 
         <div className="auth-logo">
-          <LogoIcon className="auth-logo-icon" />
+          <img className="auth-logo-icon" src="/login-icon.svg" alt="Cinema App" />
         </div>
 
         {status === 'login' && (

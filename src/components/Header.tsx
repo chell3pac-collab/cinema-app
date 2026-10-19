@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { mockMovies, type Movie } from '../data/movies.mock';
 import './Header.css';
-import LogoIcon from '../assets/logo-white.svg?react';
 import SearchIcon from '../assets/SearchIcon.svg?react';
 import { SearchDropdown } from './SearchDropdown';
 import GenresIcon from '../assets/genresIcon.svg?react';
@@ -97,7 +96,6 @@ const Header: React.FC<HeaderProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isSearchExpanded]);
 
-  // Автофокус при раскрытии
   useEffect(() => {
     if (isSearchExpanded && searchInputRef.current) {
       searchInputRef.current.focus();
@@ -109,7 +107,7 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <header className="app-header">
       <div className="logo" onClick={() => navigate('/')}>
-        <LogoIcon className='logo-icon' />
+        <img src="/logo-white.svg" alt="Cinema App" className='logo-icon' />
       </div>
       <div className='wrapper'>
         <div className='logo-wrapper'>
